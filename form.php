@@ -1,7 +1,7 @@
 <?php 
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
-ini_set('error_log','/var/www/projects/ReservationTicket/my_file.log');
+ini_set('error_log','/var/www/projects/ReservationSystem/my_file.log');
 //include("file_with_errors.php");
 $secure_token_id = md5(rand(100, 1000000) . time());
 		
@@ -17,9 +17,9 @@ $secure_token_id = md5(rand(100, 1000000) . time());
 
 			'SECURETOKENID' => $secure_token_id,
 			'AMT' => '20',
-			'SILENTPOSTURL' => 'http://52.3.123.60/ReservationTicket/silent.php',
-			'RETURNURL' => 'http://52.3.123.60/ReservationTicket/returnpage.php',
-			'ERRORURL' => 'http://52.3.123.60/ReservationTicket/errorpage.php',
+			'SILENTPOSTURL' => 'http://52.3.123.60/ReservationSystem/silent.php',
+			'RETURNURL' => 'http://52.3.123.60/ReservationSystem/order.php',
+			'ERRORURL' => 'http://52.3.123.60/ReservationSystem/errorpage.php',
 			'BILLTOFIRSTNAME' => 'Test',
 			'BILLTOLASTNAME' => 'LAST',
 			'BILLTOEMAIL' => 'testpaypal@tedcorp.com',

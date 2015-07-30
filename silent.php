@@ -14,11 +14,11 @@ print_r($_GET);
 
 $fh=fopen('result.txt','a');
 
-foreach ($_GET as $value){
-fwrite($fh,$value." ");
+foreach ($_GET as $key=>$value){
+fwrite($fh,$key."=".$value." ");
 }
-foreach ($_POST as $value){
-fwrite($fh,$value." ");
+foreach ($_POST as $key=>$value){
+fwrite($fh,$key."=".$value." ");
 }
 fclose($fh);
 
